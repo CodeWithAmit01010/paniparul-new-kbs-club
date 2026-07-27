@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paniparul New K.B.S Club | Official Website - Celebrating Knowledge, Culture & Devotion</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Official website of Paniparul New K.B.S Club. Celebrating Sri Sri Saraswati Puja with devotion, culture, unity, and grandeur every year. Explore our archive, members, and events.">
+    <meta name="keywords" content="Paniparul New KBS Club, Saraswati Puja 2026, Paniparul Club, Cultural Club West Bengal, Pushpanjali, Panchang, Member Directory">
+    <meta name="author" content="Paniparul New K.B.S Club">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Favicon / Tab Icon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Open Graph / Social Media Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Paniparul New K.B.S Club - Saraswati Puja Celebration">
+    <meta property="og:description" content="Join us in celebrating Sri Sri Saraswati Puja. Virtual Pushpanjali, Live Countdown, Digital Memory Book, and more.">
+    <meta property="og:image" content="assets/logo.png">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Background Audio Element -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="assets/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress"></div>
+
+    <!-- Mouse Glow Follower -->
+    <div id="cursor-glow"></div>
+
+    <!-- Canvas Layer for Dynamic Effects (Particles/Flowers) -->
+    <canvas id="fx-canvas"></canvas>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <img src="assets/logo.png" alt="Paniparul New KBS Club Logo" class="logo-img">
+                <span>Paniparul New K.B.S Club</span>
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#puja" class="nav-link">Saraswati Puja</a></li>
+                <li><a href="#panchang" class="nav-link">Panchang</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#members" class="nav-link">Members</a></li>
+                <li><a href="#notice" class="nav-link">Notice</a></li>
+                <li><a href="#wishes" class="nav-link">Wish Wall</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <button class="music-toggle" id="music-toggle" title="Toggle Ambient Audio">🎵</button>
+                <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">🌙</button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-badge">Est. Official Cultural Club</span>
+            <h1 class="hero-title">Paniparul New K.B.S Club</h1>
+            <p class="hero-subtitle">"Celebrating Knowledge, Culture & Devotion"</p>
+            <div class="hero-typing" id="hero-typing"></div>
+            
+            <div class="hero-cta">
+                <button class="btn btn-primary" onclick="offerPushpanjali()">🌸 Offer Virtual Pushpanjali</button>
+                <a href="#puja" class="btn btn-outline">Explore Rituals</a>
+            </div>
+
+            <!-- Live Digital Clock & Saraswati Puja Countdown Grid -->
+            <div class="live-widgets-grid">
+                <!-- Clock Widget -->
+                <div class="glass-card widget-card">
+                    <div class="widget-title">Live Indian Standard Time (IST)</div>
+                    <div class="clock-display" id="clock-time">00:00:00 AM</div>
+                    <div class="clock-date" id="clock-date">Loading date...</div>
+                </div>
+
+                <!-- Countdown Widget -->
+                <div class="glass-card widget-card">
+                    <div class="widget-title" id="cd-title">Countdown to Saraswati Puja</div>
+                    <div class="countdown-timer">
+                        <div class="cd-unit"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Days</span></div>
+                        <div class="cd-unit"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Hours</span></div>
+                        <div class="cd-unit"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">Mins</span></div>
+                        <div class="cd-unit"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">Secs</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section container" id="about">
+        <div class="section-title">
+            <h2>About Our Heritage</h2>
+            <p>Devoted exclusively to Maa Saraswati & Community Upliftment</p>
+        </div>
+        
+        <div class="glass-card" style="padding: 2.5rem; text-align: center; max-width: 900px; margin: 0 auto;">
+            <p style="font-size: 1.15rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.8;">
+                <strong>Paniparul New K.B.S Club</strong> stands as a beacon of unity, culture, and sacred devotion. Unlike multi-festive organizations, our club is uniquely dedicated to organizing <strong>Sri Sri Saraswati Puja</strong> every year with utmost reverence, grandeur, and traditional purity.
+            </p>
+            <p style="color: var(--text-muted); font-size: 1rem;">
+                Our mission is to foster knowledge, promote local artistic talent, support youth development, and bring together families across generations under the divine blessings of the Goddess of Wisdom.
+            </p>
+        </div>
+    </section>
+
+    <!-- Interactive Rituals & Saraswati Puja Section -->
+    <section class="section container" id="puja">
+        <div class="section-title">
+            <h2>Virtual Sacred Rituals</h2>
+            <p>Participate in devotion anywhere in the world</p>
+        </div>
+
+        <div class="rituals-grid">
+            <!-- Virtual Diya Card -->
+            <div class="glass-card ritual-card">
+                <h3>Light a Virtual Diya</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Click the diya below to ignite the holy light</p>
+                
+                <div class="diya-container" id="virtual-diya" onclick="toggleDiya()">
+                    <svg class="diya-svg" viewBox="0 0 100 100">
+                        <!-- Flame -->
+                        <path class="diya-flame" d="M50,15 Q40,35 50,50 Q60,35 50,15 Z" fill="url(#flameGrad)"/>
+                        <!-- Diya Base -->
+                        <path d="M20,60 Q50,90 80,60 Q85,55 75,55 L25,55 Q15,55 20,60 Z" fill="#d35400" stroke="#f39c12" stroke-width="2"/>
+                        <defs>
+                            <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                                <stop offset="0%" stop-color="#e67e22"/>
+                                <stop offset="50%" stop-color="#f1c40f"/>
+                                <stop offset="100%" stop-color="#ffffff"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span id="diya-status" style="font-size: 0.85rem; color: var(--accent-gold);">Click to light</span>
+            </div>
+
+            <!-- Virtual Flower Offering Card -->
+            <div class="glass-card ritual-card">
+                <h3>Virtual Pushpanjali</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem; margin-bottom: 1.5rem;">Offer sacred marigold and lotus petals to Maa Saraswati</p>
+                <button class="btn btn-primary" onclick="offerPushpanjali()" style="margin-top: auto;">Offer Flowers 🌸</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panchang & Festival Schedule -->
+    <section class="section container" id="panchang">
+        <div class="section-title">
+            <h2>Panchang & Schedule</h2>
+            <p>Auspicious timings for Saraswati Puja Celebrations</p>
+        </div>
+
+        <div class="glass-card" style="padding: 2rem;">
+            <h3 style="text-align: center; color: var(--accent-gold); font-family: var(--font-heading);">Holy Panchang Details</h3>
+            <div class="panchang-grid">
+                <div class="panchang-item"><span>Date</span><strong id="p-date">Basant Panchami</strong></div>
+                <div class="panchang-item"><span>Tithi</span><strong>Shukla Panchami</strong></div>
+                <div class="panchang-item"><span>Pushpanjali Timing</span><strong>08:30 AM - 11:15 AM</strong></div>
+                <div class="panchang-item"><span>Bhog Aarti</span><strong>12:30 PM</strong></div>
+            </div>
+
+            <!-- Cultural Schedule Timeline -->
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card" style="padding: 1rem;">
+                        <h4 style="color: var(--accent-gold);">Morning Rituals</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Idol Installation, Prana Pratishtha & Pushpanjali</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card" style="padding: 1rem;">
+                        <h4 style="color: var(--accent-gold);">Midday Prasad</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Grand Bhog Distribution to all devotees</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card" style="padding: 1rem;">
+                        <h4 style="color: var(--accent-gold);">Evening Culture</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary);">Drama, Music Performance & Drawing Competition Prize Distribution</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section container" id="gallery">
+        <div class="section-title">
+            <h2>Photo Gallery</h2>
+            <p>Memories from past celebrations</p>
+        </div>
+
+        <div class="gallery-filter">
+            <button class="filter-btn active" onclick="filterGallery('all', event)">All</button>
+            <button class="filter-btn" onclick="filterGallery('idol', event)">Idol</button>
+            <button class="filter-btn" onclick="filterGallery('culture', event)">Cultural</button>
+            <button class="filter-btn" onclick="filterGallery('decoration', event)">Pandal</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Injected via JS -->
+        </div>
+    </section>
+
+    <!-- Members Directory -->
+    <section class="section container" id="members">
+        <div class="section-title">
+            <h2>Club Members</h2>
+            <p>Our dedicated committee & organizers</p>
+        </div>
+
+        <div class="directory-controls">
+            <input type="text" id="member-search" class="search-input" placeholder="Search member by name..." oninput="renderMembers()">
+            <select id="member-role-filter" class="select-input" onchange="renderMembers()">
+                <option value="all">All Roles</option>
+                <option value="President">President</option>
+                <option value="Secretary">Secretary</option>
+                <option value="Treasurer">Treasurer</option>
+                <option value="Executive">Executive Member</option>
+            </select>
+        </div>
+
+        <div class="members-grid" id="members-grid">
+            <!-- Injected via JS -->
+        </div>
+    </section>
+
+    <!-- Notice Board Section -->
+    <section class="section container" id="notice">
+        <div class="section-title">
+            <h2>Notice Board</h2>
+            <p>Official announcements and club updates</p>
+        </div>
+
+        <div class="notice-list">
+            <div class="glass-card notice-item">
+                <div>
+                    <h4 style="color: var(--accent-gold); margin-bottom: 0.25rem;">General Body Meeting Called</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">All members are requested to attend the upcoming preparation meeting for Saraswati Puja, Meeting date will be shared shortly.</p>
+                </div>
+                <div class="notice-date">Upcoming</div>
+            </div>
+            <div class="glass-card notice-item">
+                <div>
+                    <h4 style="color: var(--accent-gold); margin-bottom: 0.25rem;">Cultural Event Registration Open</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Children can register for the annual drawing and recitation competitions.</p>
+                </div>
+                <div class="notice-date">Active</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visitor Wish Wall Section -->
+    <section class="section container" id="wishes">
+        <div class="section-title">
+            <h2>Devotees Wish Wall</h2>
+            <p>Leave your prayers and warm wishes for Saraswati Puja</p>
+        </div>
+
+        <form class="wish-form" id="wish-form" onsubmit="handleWishSubmit(event)">
+            <input type="text" id="wish-name" class="wish-input" placeholder="Your Name" required>
+            <textarea id="wish-message" class="wish-textarea" rows="3" placeholder="Write your blessings/wishes (e.g., Happy Saraswati Puja!)..." required></textarea>
+            <button type="submit" class="btn btn-primary">Post Wish ✨</button>
+        </form>
+
+        <div class="wish-wall-grid" id="wish-wall-grid">
+            <!-- Injected via JS -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Paniparul New K.B.S Club</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Organizing official Sri Sri Saraswati Puja with devotion, unity, and heritage.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#puja">Saraswati Puja</a></li>
+                        <li><a href="#members">Committee</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Paniparul, Paniparul Kultikri Road, Purba Medinipur, West Bengal, 721448, India</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Email: paniparulnewkbsclub2018@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;  2026 Paniparul New K.B.S Club. All Rights Reserved.
+
+Designed & Developed with ❤️ by Amit Maity</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged View">
+    </div>
+
+    <!-- Hidden Easter Egg Floating Banner -->
+    <div id="easter-egg-banner">
+        🎉 You found the secret Easter Egg! Welcome to Paniparul New K.B.S Club! 🙏
+    </div>
+
+    <!-- External Modular JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
