@@ -352,7 +352,7 @@ function initMusicController() {
     const audio = document.getElementById('bg-music');
     const musicBtn = document.getElementById('music-toggle');
     let isPlaying = false;
-
+    
     function playAudio() {
         audio.play().then(() => {
             isPlaying = true;
@@ -412,7 +412,7 @@ themeBtn.addEventListener('click', () => {
 
 function autoThemeByTime() {
     const hour = new Date().getHours();
-    if (hour >= 6 && hour < 18) {
+    if (hour >= 6 && hour < 11) {
         document.documentElement.setAttribute('data-theme', 'light');
         themeBtn.textContent = '☀️';
     }
